@@ -1,3 +1,5 @@
+using KLDFishStall.Web.Services;
+using KLDFishStall.Web.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +28,8 @@ namespace KLDFishStall.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddTransient<ICommonService, CommonService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +51,7 @@ namespace KLDFishStall.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "api/{controller}/{action}/{id?}");
             });
 
             app.UseSpa(spa =>
