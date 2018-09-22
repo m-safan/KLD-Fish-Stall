@@ -1,72 +1,36 @@
-<!-- <div class='main-nav'>
-    <div class='navbar navbar-inverse'>
-        <div class='navbar-header'>
-            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse' [attr.aria-expanded]='isExpanded' (click)='toggle()'>
-                <span class='sr-only'>Toggle navigation</span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-            </button>
-            <a class='navbar-brand' [routerLink]='["/"]'>KLDFishStall.Web</a>
-        </div>
-        <div class='clearfix'></div>
-        <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
-            <ul class='nav navbar-nav'>
-                <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-                    <a [routerLink]='["/"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-home'></span> Home
-                    </a>
-                </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/counter"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-education'></span> Counter
-                    </a>
-                </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div> -->
-
-
 <header id="header">
     <div class="container">
         <div id="logo" class="pull-left">
-        <!-- <img src="assets/img/logo.png" alt="" title="" /> -->
-        <!-- Uncomment below if you prefer to use a text image -->
-        <h1><a [routerLink]='[""]'>KLD Fish Stall</a></h1>
+            <!-- <img src="assets/img/logo.png" alt="" title="" /> -->
+            <!-- Uncomment below if you prefer to use a text image -->
+            <h1><a [routerLink]='[""]'>KLD Fish Stall</a></h1>
         </div>
 
         <nav id="nav-menu-container">
-        <ul class="nav-menu">
-            <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/home"]'>Home</a></li>
-            <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/shop"]'>Shop</a></li>
-            <li><a href="#services">My Orders</a></li>
-            <li class="menu-has-children">
-            <a href="">Settings</a>
-            <ul>
-                <li><a href="#">Update Profile</a></li>
-                <li class="menu-has-children">
-                <a href="#">Change Password</a>
-                <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
+            <ul class="nav-menu">
+                <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/home"]'>Home</a></li>
+                <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/shop"]'>Shop</a></li>
+                <li *ngIf="_sharedModel.UserRole == 'admin' || _sharedModel.UserRole == 'operator'" class="menu-has-children">
+                    <a href="">Manage</a>
+                    <ul>
+                        <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/manage-fish-category"]'>Manage Fish Category</a></li>
+                        <li><a href="">Add New Fish</a></li>
+                        <li><a href="">Manage / Edit Fish</a></li>
+                        <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/manage-fish-price"]'>Manage Fish Price</a></li>
+                    </ul>
                 </li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-                <li><a href="#">Drop Down 5</a></li>
+                <li class="menu-has-children">
+                    <a href="">User</a>
+                    <ul>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Logout</a></li>
+                        <li><a href="">My Orders</a></li>
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="">Change Password</a></li>
+                    </ul>
+                </li>
+                <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/locate-us"]'>Locate Us</a></li>
             </ul>
-            </li>
-            <li [routerLinkActive]='["menu-active"]'><a [routerLink]='["/locate-us"]'>Locate Us</a></li>
-        </ul>
         </nav>
         <!-- #nav-menu-container -->
     </div>

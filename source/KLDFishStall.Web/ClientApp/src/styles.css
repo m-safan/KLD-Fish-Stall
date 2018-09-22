@@ -12,6 +12,7 @@ body {
     background: #fff;
     color: #666666;
     font-family: "Open Sans", sans-serif;
+    margin: 0px;
   }
   
   a {
@@ -190,7 +191,7 @@ body {
   #header {
     background: #111;
     padding: 20px 0;
-    height: 90px;
+    height: 80px;
   }
   
   #header #logo {
