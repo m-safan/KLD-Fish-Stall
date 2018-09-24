@@ -17,6 +17,7 @@ import { LocateUsComponent } from './locate-us/locate-us.component';
 import { SharedModelService } from './shared-model.service';
 import { ManageFishCategoryComponent } from './manage-fish-category/manage-fish-category.component';
 import { ManageFishPriceComponent } from './manage-fish-price/manage-fish-price.component';
+import { TruncateString } from './truncate-string.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ManageFishPriceComponent } from './manage-fish-price/manage-fish-price.
     ShopComponent,
     LocateUsComponent,
     ManageFishCategoryComponent,
-    ManageFishPriceComponent
+    ManageFishPriceComponent,
+    TruncateString
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

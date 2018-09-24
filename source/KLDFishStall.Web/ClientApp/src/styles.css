@@ -536,11 +536,11 @@ body {
     padding: 80px 0 60px 0;
   }
   
-  #services .service-item {
-    margin-bottom: 20px;
+  .service-item {
+    margin-bottom: 40px;
   }
   
-  #services .service-icon {
+  .service-icon {
     float: left;
     background: #03C4EB;
     padding: 16px;
@@ -549,31 +549,31 @@ body {
     border: 1px solid #03C4EB;
   }
   
-  #services .service-icon i {
+  .service-icon i {
     color: #fff;
     font-size: 24px;
   }
   
-  #services .service-item:hover .service-icon {
+  .service-item:hover .service-icon {
     background: #fff;
   }
   
-  #services .service-item:hover .service-icon i {
+  .service-item:hover .service-icon i {
     color: #03C4EB;
   }
   
-  #services .service-title {
+  .service-title {
     margin-left: 80px;
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
   }
   
-  #services .service-title a {
+  .service-title a {
     color: #111;
   }
   
-  #services .service-description {
+  .service-description {
     margin-left: 80px;
     line-height: 24px;
   }
@@ -628,7 +628,7 @@ body {
     padding: 80px 0;
   }
   
-  #portfolio .portfolio-item {
+  .portfolio-item {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -640,7 +640,7 @@ body {
     margin-bottom: 30px;
   }
   
-  #portfolio .portfolio-item .details {
+  .portfolio-item .details {
     height: 260px;
     background: #fff;
     display: table-cell;
@@ -650,7 +650,7 @@ body {
     text-align: center;
   }
   
-  #portfolio .portfolio-item .details h4 {
+  .portfolio-item .details h4 {
     font-size: 16px;
     transition: transform 0.3s, opacity 0.3s;
     transform: translate3d(0, -15px, 0);
@@ -658,7 +658,7 @@ body {
     color: #333333;
   }
   
-  #portfolio .portfolio-item .details span {
+  .portfolio-item .details span {
     display: block;
     color: #666666;
     font-size: 13px;
@@ -666,15 +666,15 @@ body {
     transform: translate3d(0, 15px, 0);
   }
   
-  #portfolio .portfolio-item:hover .details {
+  .portfolio-item:hover .details {
     opacity: 0.8;
   }
   
-  #portfolio .portfolio-item:hover .details h4 {
+  .portfolio-item:hover .details h4 {
     transform: translate3d(0, 0, 0);
   }
   
-  #portfolio .portfolio-item:hover .details span {
+  .portfolio-item:hover .details span {
     transform: translate3d(0, 0, 0);
   }
   
@@ -741,7 +741,7 @@ body {
   --------------------------------*/
   #team {
     background: #fff;
-    padding: 80px 0 60px 0;
+    padding: 30px 0 60px 0;
   }
   
   #team .member {
@@ -878,3 +878,127 @@ body {
     color: #ccc;
   }
   
+  .product-image-wrapper{
+    border:1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom:30px;
+  }
+  
+  .single-products {
+    position: relative;
+  }
+  
+  .new, .sale {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .productinfo h2{
+    /* color: #FE980F; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .product-overlay h2{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  
+  .productinfo p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    /* color: #696763; */
+  }
+  
+  .productinfo img{
+    width: 100%;
+  }
+  
+  .productinfo{
+   position:relative;
+  }
+  
+  .product-overlay {
+    top: 0;
+    display: none;
+    height: 0;
+    position: absolute;
+    transition: height 500ms ease 0s;
+    width: 100%;
+    display: block;
+    opacity:0.8;
+  }
+  
+  .single-products:hover .product-overlay {
+    display:block;
+    height:100%;
+  }
+  
+  
+  .product-overlay .overlay-content {
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .product-overlay .add-to-cart {
+    background:#fff;
+    border: 0 none;
+    border-radius: 0;
+    color: #FE980F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .product-overlay .add-to-cart:hover {
+    background:#fff;
+    color: #FE980F;
+  }
+  
+  
+  .product-overlay p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  
+  
+  /* .add-to-cart {
+    background:#F5F5ED;
+    border: 0 none;
+    border-radius: 0;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .add-to-cart:hover {
+    background: #FE980F;
+    border: 0 none;
+    border-radius: 0;
+    color: #FFFFFF;
+  }
+  
+  .add-to{
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart i{
+    margin-right:5px;
+  }
+  
+  .add-to-cart:hover {
+    background: #FE980F;
+    color: #FFFFFF;
+  } */
